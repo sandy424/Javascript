@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+    <title>지출 내역 계산</title>
+    <script>
+        let name = prompt("고객님의 성함을 입력해주세요.");
+            
+        function calculateExpense(event) {  //값을 계산하는 기능을 가진 함수
+            event.preventDefault();
+
+            let trans = parseInt(document.getElementById("trans").value) || 0;
+            let drinks = parseInt(document.getElementById("drinks").value) || 0;
+            let food = parseInt(document.getElementById("food").value) || 0;
+
+            let total = trans + drinks + food;
+            let remain = total - 10000;
+            let result = total>10000 ? remain+"원 초과" : "돈 관리 잘 했어요!";
+                
+            alert(`${name}님의 하루 지출 내역: 총 ${total}원으로 ${result}`);
+        }
+    </script>
+    </head>
+    <body>
+        <h2><script>document.write(name + "님의 하루 지출 내역");
+        </script></h2>
+        <form onsubmit="calculateExpense(event)">
+            <label>교통비 : </label>
+            <input type="number" id="trans" placeholder="0"> 원 <br>
+            <label>음료비 : </label>
+            <input type="number" id="drinks" placeholder="0"> 원 <br>
+            <label>식비 : </label>
+            <input type="number" id="food" placeholder="0"> 원 <br><br>
+
+            <button type="submit">계산하기</button>
+        </form>
+    </body>
+</html>
