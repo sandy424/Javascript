@@ -7,7 +7,7 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background-color: pink;
+    background-color: rgb(235, 198, 204);
     padding: 10px;
 }
 .todo-app{
@@ -53,4 +53,36 @@ button {
     border-radius: 40px;
     cursor: pointer;
     
+}
+ul li {
+    list-style: none;
+    font-size: 19px;
+    text-align: left;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("/images/uncheck.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration:line-through;
+}
+ul li.checked::before {
+    background-image: url("/images/check.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
 }
