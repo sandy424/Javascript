@@ -23,3 +23,12 @@ checkList.addEventListener("click", function(e){
         e.target.parentElement.remove();
     }
 }, false);
+
+//사이드바 버튼
+const sideBar = document.querySelector('.sidebar');
+const sideBtn = document.querySelector('.side-btn span');
+
+function openBar() {
+    sideBar.classList.toggle('active');
+}
+sideBtn.addEventListener('click', openBar);

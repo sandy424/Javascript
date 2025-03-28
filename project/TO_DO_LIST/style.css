@@ -36,14 +36,14 @@
     padding-left: 20px;
     margin-bottom: 25px;
 }
-input {
+.row input {
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
 }
-button {
+.row button {
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -69,7 +69,7 @@ ul li::before {
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url("/images/uncheck.png");
+    background-image: url("/project/images/uncheck.png");
     background-size: cover;
     background-position: center;
     top: 8px;
@@ -82,7 +82,7 @@ ul li.checked {
 ul li.checked::before {
     height: 18px;
     width: 18px;
-    background-image: url("/images/check.png");
+    background-image: url("/project/images/check.png");
     background-size: cover;
     background-position: center;
     top: 13px;
@@ -102,4 +102,68 @@ ul li span{
 }
 ul li span:hover {
     background: #edeef0;  
+}
+/* 메뉴창 스타일 */
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #353434;
+    opacity: 0.8;
+    transition: all 300ms ease-in-out;
+}
+.sidebar .side-btn{
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.sidebar .side-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+    background: #111;
+    transition: all 300ms ease-in-out;
+}
+.sidebar .side-btn span:nth-child(1){
+    top: 10%;
+}
+.sidebar .side-btn span:nth-child(2){
+    top: 50%;
+}
+.sidebar .side-btn span:nth-child(3){
+    top: 90%;
+}
+.sidebar .links a{
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    border-bottom: 1px solid #111;
+}
+.sidear .links a.active,
+.sidebar .links a:hover{
+    background: #111;
+    color: #7c90de;
+}
+
+.sidebar .active {
+    left: 0px;
+}
+.sidebar .active .side-btn span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.sidebar .active .side-btn span:nth-child(2){
+    display: none;
+}
+.sidebar .active .side-btn span:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
 }
