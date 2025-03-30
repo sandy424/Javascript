@@ -10,6 +10,15 @@
     background-color: lightgray;
     padding: 10px;
 }
+.setting .pre-btn span:nth-child(1){
+    top: 10%;
+}
+.setting .pre-btn span:nth-child(2){
+    top: 50%;
+}
+.setting .pre-btn span:nth-child(3){
+    top: 90%;
+}
 .cal {
     width: 100%;
     max-width: 540px;

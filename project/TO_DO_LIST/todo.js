@@ -28,3 +28,5 @@ checkList.addEventListener('click', function(e){
 document.querySelector(".sidebar .side-btn").addEventListener("click", function(){
     document.querySelector(".sidebar").classList.toggle("active");
 })
+//setting 버튼 테마 변경
+const setting = document.querySelector(".links");
