@@ -7,9 +7,18 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(235, 198, 204);
+    background-color: lightgray;
     padding: 10px;
 }
+.cal {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+/*투두리스트*/
 .todo-app{
     width: 100%;
     max-width: 540px;
@@ -147,23 +156,23 @@ ul li span:hover {
     cursor: pointer;
     border-bottom: 1px solid #111;
 }
-.sidear .links a.active,
+.sidebar .links a.active,
 .sidebar .links a:hover{
     background: #111;
     color: #7c90de;
 }
 
-.sidebar .active {
+.sidebar.active {
     left: 0px;
 }
-.sidebar .active .side-btn span:nth-child(1){
+.sidebar.active .side-btn span:nth-child(1){
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
 }
-.sidebar .active .side-btn span:nth-child(2){
-    display: none;
+.sidebar.active .side-btn span:nth-child(2){
+    opacity: 0;
 }
-.sidebar .active .side-btn span:nth-child(3){
+.sidebar.active .side-btn span:nth-child(3){
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
 }
